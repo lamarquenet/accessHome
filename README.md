@@ -2,7 +2,7 @@
 
 A modern, responsive dashboard application for managing and accessing AI-related services and tools. Built with Next.js and React.
 
-![Dashboard Screenshot](/public/images/ttsindex.png)
+![Dashboard Screenshot](/public/images/openwebui.png)
 
 ## Overview
 
