@@ -1,0 +1,97 @@
+/* Reset and base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-geist-sans);
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Light mode variables */
+:root {
+  --background-color: #f3f4f6;
+  --text-color: #111827;
+  --border-color: #e5e7eb;
+  --primary-color: #4f46e5;
+  --primary-hover-color: #4338ca;
+  --error-background: #fee2e2;
+  --error-text: #b91c1c;
+  --error-border: #f87171;
+  --card-background: #ffffff;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --input-background: #ffffff;
+  --muted-text: #6b7280;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+  --background-color: #111827;
+  --text-color: #f9fafb;
+  --border-color: #4b5563;
+  --primary-color: #6366f1;
+  --primary-hover-color: #4f46e5;
+  --error-background: #7f1d1d;
+  --error-text: #fecaca;
+  --error-border: #b91c1c;
+  --card-background: #1f2937;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --input-background: #374151;
+  --muted-text: #9ca3af;
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+/* Global utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
