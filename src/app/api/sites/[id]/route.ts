@@ -3,11 +3,10 @@ import { getAllSites, saveAllSites } from '@/lib/data-access/sites';
 import { Site } from '@/types';
 
 // PUT /api/sites/[id]
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
-  const id = params.id; // Get the ID from the params object
+export async function PUT(request: NextRequest, { params } : { params: Promise<{ id: string }> }) {
+  const { id } = await params;
 
   if (!id) {
-    // This check might be redundant if Next.js guarantees the param, but good practice
     return NextResponse.json({ message: 'Site ID is required for update' }, { status: 400 });
   }
 
@@ -26,13 +25,12 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
       return NextResponse.json({ message: `Site with ID ${id} not found` }, { status: 404 });
     }
 
-    // Update the site data (keep the original ID)
     const updatedSite: Site = {
-      ...sites[siteIndex], // Keep existing fields like ID
+      ...sites[siteIndex],
       name: body.name,
       link: body.link,
       description: body.description,
-      thumbnailUrl: body.thumbnailUrl, // Update or add optional field
+      thumbnailUrl: body.thumbnailUrl,
     };
 
     sites[siteIndex] = updatedSite;
@@ -41,17 +39,18 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
     return NextResponse.json(updatedSite);
   } catch (error) {
     console.error(`API PUT /api/sites/${id} Error:`, error);
-     // Handle JSON parsing errors specifically
+
     if (error instanceof SyntaxError) {
-        return NextResponse.json({ message: 'Invalid JSON format in request body' }, { status: 400 });
+      return NextResponse.json({ message: 'Invalid JSON format in request body' }, { status: 400 });
     }
+
     return NextResponse.json({ message: 'Failed to update site' }, { status: 500 });
   }
 }
 
 // DELETE /api/sites/[id]
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
-  const id = params.id; // Get the ID from the params object
+export async function DELETE(request: NextRequest, { params } : { params: Promise<{ id: string }> }) {
+  const { id } = await params; // Get the ID from the params object
 
   if (!id) {
     // This check might be redundant if Next.js guarantees the param, but good practice

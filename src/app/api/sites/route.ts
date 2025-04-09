@@ -4,7 +4,7 @@ import { Site } from '@/types';
 import { randomUUID } from 'crypto'; // Use built-in crypto module
 
 // GET /api/sites
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const sites = await getAllSites();
     return NextResponse.json(sites);

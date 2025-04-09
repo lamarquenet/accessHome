@@ -1,3 +1,4 @@
+'use client';
 import React, { ReactNode, MouseEvent, useState } from 'react';
 import { useTheme } from '../hooks/useTheme';
 
