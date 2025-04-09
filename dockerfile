@@ -23,6 +23,9 @@ COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json
 
+ENV PORT=3001
+ENV HOST=0.0.0.0
+
 EXPOSE 3001
 
-CMD ["node", "server.js"]
+CMD ["npm", "run", "start"]
