@@ -1,4 +1,5 @@
-FROM node:23-alpine
+# --- First stage: Builder ---
+FROM node:23-alpine AS builder
 # Set working directory
 WORKDIR /app
 
