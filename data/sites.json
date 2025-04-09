@@ -4,55 +4,55 @@
     "name": "TTSindex",
     "link": "http://192.168.8.209:7060",
     "description": "Clona tu voz y usa texto para hacerla hablar en ingles o chino",
-    "thumbnailUrl": "/window.svg"
+    "thumbnailUrl": "/images/indextts.jpg"
   },
   {
     "id": "webui",
     "name": "WebUi",
     "link": "http://192.168.8.209:8080",
     "description": "Crea tu cuenta y chatea con nuestra seleccion de modelos open source como si fuera chat gpt.",
-    "thumbnailUrl": "/globe.svg"
+    "thumbnailUrl": "/images/openwebui.jpg"
   },
   {
     "id": "comfyui",
     "name": "ComfyUi",
     "link": "http://192.168.8.209:8188",
     "description": "Crea flujos de trabajo para generacion de imagenes, videos, y lo que te imagines",
-    "thumbnailUrl": "/window.svg"
+    "thumbnailUrl": "/images/comfy.jpg"
   },
   {
     "id": "sesame",
     "name": "Sesame",
     "link": "http://192.168.8.209:8081",
     "description": "Otro clonador de voz con mas expresion",
-    "thumbnailUrl": "/window.svg"
+    "thumbnailUrl": "/images/sesame.jpg"
   },
   {
     "id": "n8n",
     "name": "n8n",
     "link": "http://192.168.8.209:5678",
     "description": "Crea flujos de agentic usando logica y llm para lograr cualquier cometido.",
-    "thumbnailUrl": "/window.svg"
+    "thumbnailUrl": "/images/n8n.jpg"
   },
   {
     "id": "quadrant",
     "name": "quadrant",
     "link": "http://192.168.8.209:6333",
     "description": "Database for llm rags.",
-    "thumbnailUrl": "/file.svg"
+    "thumbnailUrl": "/images/quadrant.jpg"
   },
   {
     "id": "redis",
     "name": "redis",
     "link": "http://192.168.8.209:6379",
     "description": "Database for llm rags.",
-    "thumbnailUrl": "/file.svg"
+    "thumbnailUrl": "/images/redis.jpg"
   },
   {
     "id": "searxng",
     "name": "searxng",
     "link": "http://192.168.8.209:8181",
     "description": "Open source service to search the web and provide a service for llm to call when need to search on their querys.",
-    "thumbnailUrl": "/globe.svg"
+    "thumbnailUrl": "/images/searxng.jpg"
   }
 ]
