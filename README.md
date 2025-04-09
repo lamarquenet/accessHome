@@ -71,6 +71,3 @@ Open [http://localhost:3001](http://localhost:3001) with your browser to see the
 
 Contributions are welcome! Feel free to submit issues or pull requests to help improve the dashboard.
 
-## License
-
-This project is private and not licensed for public distribution.
