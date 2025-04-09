@@ -187,13 +187,14 @@ export default function HomePage() {
     // Media queries aren't supported in React inline styles
   };
 
-  // Grid container styles
+  // Grid container styles - using CSS custom properties for responsive behavior
   const gridContainerStyles = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(1, minmax(0, 1fr))', // grid-cols-1
+    gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', // Responsive grid with minimum card width of 250px
     gap: '1rem', // gap-4
-    // Media queries aren't supported in React inline styles
-    // Using single column layout for now
+    width: '100%',
+    maxWidth: '1200px', // Limit maximum width to prevent too wide cards on large screens
+    margin: '0 auto', // Center the grid
   };
 
   // Modal error styles

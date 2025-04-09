@@ -19,6 +19,7 @@
 
 # production
 /build
+/dashboard-app
 
 # misc
 .DS_Store

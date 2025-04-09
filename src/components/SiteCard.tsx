@@ -38,11 +38,15 @@ const SiteCard: React.FC<SiteCardProps> = ({ site, onEdit, onDelete }) => {
     borderStyle: 'solid' as const,
     borderColor: theme === 'light' ? '#e5e7eb' : '#4b5563', // border-gray-200 : dark:border-gray-700
     backgroundColor: theme === 'light' ? '#ffffff' : '#1f2937', // bg-white : dark:bg-gray-800
-    boxShadow: isHovered 
+    boxShadow: isHovered
       ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' // hover:shadow-md
       : '0 1px 2px 0 rgba(0, 0, 0, 0.05)', // shadow-sm
     transition: 'box-shadow 200ms ease-in-out', // transition-shadow duration-200
     overflow: 'hidden', // overflow-hidden
+    display: 'flex',
+    flexDirection: 'column' as const,
+    height: '100%',
+    maxWidth: '100%',
   };
 
   // Link styles
@@ -54,7 +58,8 @@ const SiteCard: React.FC<SiteCardProps> = ({ site, onEdit, onDelete }) => {
   const imageContainerStyles = {
     position: 'relative' as const,
     width: '100%',
-    height: '10rem', // h-40
+    height: '8rem', // Reduced height for more square-like appearance
+    aspectRatio: '4/3', // Maintain a consistent aspect ratio
   };
 
   // Image styles
@@ -65,12 +70,14 @@ const SiteCard: React.FC<SiteCardProps> = ({ site, onEdit, onDelete }) => {
 
   // Content container styles
   const contentContainerStyles = {
-    padding: '1rem', // p-4
+    padding: '0.75rem', // p-3 (reduced padding)
+    height: '5rem', // Fixed height for consistent card sizes
+    overflow: 'hidden',
   };
 
   // Title styles
   const titleStyles = {
-    fontSize: '1.125rem', // text-lg
+    fontSize: '1rem', // text-base (reduced from text-lg)
     fontWeight: 600, // font-semibold
     color: theme === 'light' ? '#111827' : '#ffffff', // text-gray-900 : dark:text-white
     marginBottom: '0.25rem', // mb-1
@@ -81,12 +88,13 @@ const SiteCard: React.FC<SiteCardProps> = ({ site, onEdit, onDelete }) => {
 
   // Description styles
   const descriptionStyles = {
-    fontSize: '0.875rem', // text-sm
+    fontSize: '0.75rem', // text-xs (reduced from text-sm)
     color: theme === 'light' ? '#4b5563' : '#9ca3af', // text-gray-600 : dark:text-gray-400
     display: '-webkit-box' as any,
     WebkitLineClamp: 2, // line-clamp-2
     WebkitBoxOrient: 'vertical' as any,
     overflow: 'hidden',
+    lineHeight: '1.2rem', // Tighter line height
   };
 
   // No description styles
