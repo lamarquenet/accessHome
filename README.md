@@ -2,7 +2,7 @@
 
 A modern, responsive dashboard application for managing and accessing AI-related services and tools. Built with Next.js and React.
 
-![Dashboard Screenshot](https://www.shutterstock.com/image-photo/website-banner-investment-dashboard-diagram-260nw-1463481071.jpg)
+![Dashboard Screenshot](https://www.shutterstock.com/image-vector/business-dashboard-finance-management-on-600nw-2139751897.jpg)
 
 ## Overview
 
