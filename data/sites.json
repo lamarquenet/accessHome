@@ -2,7 +2,7 @@
   {
     "id": "ttsindex",
     "name": "TTSindex",
-    "link": "http://192.168.8.209:7060",
+    "link": "http://192.168.8.209:7860",
     "description": "Clona tu voz y usa texto para hacerla hablar en ingles o chino",
     "thumbnailUrl": "/images/indextts.jpg"
   },

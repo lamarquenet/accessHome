@@ -222,7 +222,7 @@ const SiteForm: React.FC<SiteFormProps> = ({
           Thumbnail URL
         </label>
         <input
-          type="url"
+          type="text"
           id="thumbnailUrl"
           name="thumbnailUrl"
           value={formData.thumbnailUrl}
